@@ -6,7 +6,7 @@ public class Dañador : MonoBehaviour
     [SerializeField] private int Daño = 5;
 #pragma warning restore 0649
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         Vida vida = other.gameObject.GetComponent<Vida>();
 

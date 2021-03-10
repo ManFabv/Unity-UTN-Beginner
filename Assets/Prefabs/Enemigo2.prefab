@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2199831974631971388}
   - component: {fileID: -4429272932281006040}
   - component: {fileID: -3821959288184101634}
+  - component: {fileID: -3325154395533136226}
   m_Layer: 0
   m_Name: Enemigo2
   m_TagString: Untagged
@@ -138,3 +139,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 20
+--- !u!54 &-3325154395533136226
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
