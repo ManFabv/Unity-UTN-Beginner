@@ -1,0 +1,13 @@
+Library
+Temp
+.vs
+obj
+*.csproj
+*.unityproj
+*.sln
+*.userprefs
+
+# AssetBundles
+Assets/Resources/BICManifest*
+Assets/Resources/DLCManifest*
+GeneratedBundles*
