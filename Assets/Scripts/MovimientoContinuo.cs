@@ -10,6 +10,18 @@ public class MovimientoContinuo : MonoBehaviour
 
     private Transform cachedTransform;
 
+    public void ChangeVelocity(float velX, float velY, float velZ)
+    {
+        velocidadX = velX;
+        velocidadY = velY;
+        velocidadZ = velZ;
+    }
+
+    public void ChangeVelocity(Vector3 vel)
+    {
+        ChangeVelocity(vel.x, vel.y, vel.z);
+    }
+
     private void Awake()
     {
         cachedTransform = this.GetComponent<Transform>();

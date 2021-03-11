@@ -25,8 +25,6 @@ public class CamaraSeguidora : MonoBehaviour
     private void LateUpdate()
     {
         if (target != null)
-        {
             cachedTransform.position = new Vector3(cachedTargetTransform.position.x, yPosition, cachedTargetTransform.position.z);
-        }
     }
 }

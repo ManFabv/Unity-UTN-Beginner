@@ -10,6 +10,18 @@ public class RotacionContinua : MonoBehaviour
 
     private Transform cachedTransform;
 
+    public void ChangeVelocity(float velX, float velY, float velZ, bool allowOnlyOnY = true)
+    {
+        velocidadRotacionX = allowOnlyOnY ? 0 : velX;
+        velocidadRotacionY = velY;
+        velocidadRotacionZ = allowOnlyOnY ? 0 : velZ;
+    }
+
+    public void ChangeVelocity(Vector3 vel, bool allowOnlyOnY = true)
+    {
+        ChangeVelocity(vel.x, vel.y, vel.z, allowOnlyOnY);
+    }
+
     private void Awake()
     {
         cachedTransform = this.GetComponent<Transform>();

@@ -114,9 +114,9 @@ GameObject:
   - component: {fileID: 7497781553943334849}
   - component: {fileID: -1439641603380092574}
   - component: {fileID: -6235695858785080956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jugador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   Prefab: {fileID: 2339640420181926629, guid: bb94ee2991f5ba44c8eb14882406dfde, type: 3}
   NombreAccion: DispararBala
   FireRate: 1
+  tagToApplyDamage: 
 --- !u!114 &505820090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +227,7 @@ MonoBehaviour:
   Prefab: {fileID: 3923789614825491096, guid: 7e6510724c2d1464ea06e6500b98cb36, type: 3}
   NombreAccion: DispararBomba
   FireRate: 1
+  tagToApplyDamage: Enemy
 --- !u!114 &7497781553943334849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +260,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &-6235695858785080956
 MonoBehaviour:

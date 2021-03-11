@@ -6,6 +6,7 @@ public class Disparador : MonoBehaviour
     [SerializeField] private GameObject Prefab;
     [SerializeField] private string NombreAccion;
     [SerializeField] private float FireRate = 1;
+    [SerializeField] private string tagToApplyDamage = "Untagged";
 #pragma warning restore 0649
 
     private Transform cachedTransform;
@@ -35,7 +36,13 @@ public class Disparador : MonoBehaviour
 
     private void FireWeapon()
     {
-        if(Prefab != null)
-            Instantiate(Prefab, cachedTransform.position, cachedTransform.rotation);
+        if (Prefab != null)
+        {
+            GameObject weaponFire = Instantiate(Prefab, cachedTransform.position, cachedTransform.rotation);
+            Dañador dañador = weaponFire.GetComponent<Dañador>();
+
+            if(dañador != null)
+                dañador.TagToApplyDamage(tagToApplyDamage);
+        }
     }
 }
