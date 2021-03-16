@@ -10,16 +10,16 @@ public class MovimientoContinuo : MonoBehaviour
 
     private Transform cachedTransform;
 
-    public void ChangeVelocity(float velX, float velY, float velZ)
+    public void ChangeVelocity(float velX, float velY, float velZ, bool allowOnlyInXZ = true)
     {
         velocidadX = velX;
-        velocidadY = velY;
+        velocidadY = allowOnlyInXZ ? 0 : velY;
         velocidadZ = velZ;
     }
 
-    public void ChangeVelocity(Vector3 vel)
+    public void ChangeVelocity(Vector3 vel, bool allowOnlyInXZ = true)
     {
-        ChangeVelocity(vel.x, vel.y, vel.z);
+        ChangeVelocity(vel.x, vel.y, vel.z, allowOnlyInXZ);
     }
 
     private void Awake()

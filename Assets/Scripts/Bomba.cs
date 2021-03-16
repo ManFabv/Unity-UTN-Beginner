@@ -8,6 +8,16 @@ public class Bomba : MonoBehaviour
     [SerializeField] private float TimeToExplode = 5;
 #pragma warning restore 0649
 
+    private string tagToApplyDamage = "Untagged";
+
+    public void TagToApplyDamage(string tag)
+    {
+        if(string.IsNullOrEmpty(tag))
+            Debug.LogError("NO HAY UN TAG SELECCIONADO EN " + nameof(tag) + ". USANDO POR DEFECTO UNTAGGED");
+        else
+            tagToApplyDamage = tag;
+    }
+
     private void Awake()
     {
         Invoke("Explota", TimeToExplode);
@@ -39,7 +49,9 @@ public class Bomba : MonoBehaviour
     {
         if (Explotar)
         {
-            Destroy(other.gameObject);
+            if(other.CompareTag(tagToApplyDamage))
+                Destroy(other.gameObject);
+
             Destroy(this.gameObject);
         }
     }

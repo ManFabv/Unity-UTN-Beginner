@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3552998088829881415}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4592208731347348061}
@@ -57,7 +57,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 20
+  far clip plane: 30
   field of view: 60
   orthographic: 1
   orthographic size: 15
@@ -109,10 +109,10 @@ GameObject:
   - component: {fileID: 4592208731347348060}
   - component: {fileID: 4592208731347348059}
   - component: {fileID: 4592208731347348058}
-  - component: {fileID: 4592208731347348062}
+  - component: {fileID: -1439641603380092574}
+  - component: {fileID: 957020845449755574}
   - component: {fileID: 505820090}
   - component: {fileID: 7497781553943334849}
-  - component: {fileID: -1439641603380092574}
   - component: {fileID: -6235695858785080956}
   m_Layer: 8
   m_Name: Jugador
@@ -133,6 +133,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2456477600619008303}
+  - {fileID: 1717023946568107713}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -196,7 +197,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4592208731347348062
+--- !u!54 &-1439641603380092574
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592208731347348057}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &957020845449755574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +228,9 @@ MonoBehaviour:
   Prefab: {fileID: 2339640420181926629, guid: bb94ee2991f5ba44c8eb14882406dfde, type: 3}
   NombreAccion: DispararBala
   FireRate: 1
-  tagToApplyDamage: 
+  VelocidadDisparo: 13
+  tagToApplyDamage: Enemy
+  DisparoSpawnPoint: {fileID: 1717023946568107713}
 --- !u!114 &505820090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +246,9 @@ MonoBehaviour:
   Prefab: {fileID: 3923789614825491096, guid: 7e6510724c2d1464ea06e6500b98cb36, type: 3}
   NombreAccion: DispararBomba
   FireRate: 1
+  VelocidadDisparo: 10
   tagToApplyDamage: Enemy
+  DisparoSpawnPoint: {fileID: 1717023946568107713}
 --- !u!114 &7497781553943334849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,22 +267,6 @@ MonoBehaviour:
   AbajoNombreAccion: Abajo
   DerechaNombreAccion: Derecha
   IzquierdaNombreAccion: Izquierda
---- !u!54 &-1439641603380092574
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4592208731347348057}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!114 &-6235695858785080956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,3 +280,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
+--- !u!1 &7508857493883672808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1717023946568107713}
+  m_Layer: 8
+  m_Name: DisparoSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1717023946568107713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7508857493883672808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4592208731347348061}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 2199831974631971385}
   - component: {fileID: 2199831974631971384}
   - component: {fileID: 2199831974631971387}
+  - component: {fileID: -8878088215903201450}
   - component: {fileID: 2199831974631971391}
   - component: {fileID: -4429272932281006040}
   - component: {fileID: 3822128332695288611}
-  - component: {fileID: -8878088215903201450}
+  - component: {fileID: -828689362718212849}
   m_Layer: 8
   m_Name: Enemigo1
   m_TagString: Enemy
@@ -33,7 +34,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.68, y: 0, z: 6.97}
   m_LocalScale: {x: 1, y: 1, z: 3}
-  m_Children: []
+  m_Children:
+  - {fileID: 7783056360300577341}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97,6 +99,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-8878088215903201450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!114 &2199831974631971391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 2339640420181926629, guid: bb94ee2991f5ba44c8eb14882406dfde, type: 3}
   FireRate: 0.75
+  VelocidadDisparo: 4
   tagToApplyDamage: Player
+  DisparoSpawnPoint: {fileID: 7783056360300577341}
 --- !u!114 &3822128332695288611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,19 +160,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 20
---- !u!54 &-8878088215903201450
-Rigidbody:
+--- !u!114 &-828689362718212849
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2199831974631971386}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4428c39d8a9348d698c9452b5d62e196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToExplode: 8
+--- !u!1 &8395450243725570677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7783056360300577341}
+  m_Layer: 8
+  m_Name: DisparoSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7783056360300577341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395450243725570677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2199831974631971390}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

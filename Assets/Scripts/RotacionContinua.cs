@@ -29,6 +29,6 @@ public class RotacionContinua : MonoBehaviour
 
     private void Update()
     {
-        cachedTransform.Rotate(velocidadRotacionX * Time.deltaTime, velocidadRotacionY * Time.deltaTime, velocidadRotacionZ * Time.deltaTime, Space.Self);
+        cachedTransform.Rotate(velocidadRotacionX * Time.deltaTime, velocidadRotacionY * Time.deltaTime, velocidadRotacionZ * Time.deltaTime);
     }
 }
