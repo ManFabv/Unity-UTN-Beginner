@@ -22,6 +22,12 @@ public class GameManagerNivel4 : MonoBehaviour
 
     private bool finishedLevel = false;
     private LevelEndState levelEndState = LevelEndState.PLAYING;
+    private bool jugadorMurio = false;
+
+    public void OnJugadorMurio()
+    {
+        jugadorMurio = true;
+    }
 
     private void Awake()
     {
@@ -40,7 +46,7 @@ public class GameManagerNivel4 : MonoBehaviour
         if (finishedLevel == false)
         {
             bool win = (ScoreManager != null && ScoreManager.Score >= MaxScoreParaGanar);
-            bool lose = (TimeManager != null && TimeManager.TimeElapsed >= TimeToLoseLevel);
+            bool lose = (TimeManager != null && TimeManager.TimeElapsed >= TimeToLoseLevel) || jugadorMurio;
 
             if (win || lose)
             {
@@ -60,6 +66,7 @@ public class GameManagerNivel4 : MonoBehaviour
     {
         DisableObjectsOfType<GeneradorOleadas>();
         DisableObjectsOfType<MovimientoContinuo>();
+        DisableObjectsOfType<MovimientoHorizontal>();
         DisableObjectsOfType<RotacionContinua>();
         DisableObjectsOfType<Disparador>();
         DisableObjectsOfType<DisparadorAutomatico>();

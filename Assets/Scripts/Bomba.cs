@@ -50,9 +50,21 @@ public class Bomba : MonoBehaviour
         if (Explotar)
         {
             if(other.CompareTag(tagToApplyDamage))
+            {
+                Jugador jugador = other.gameObject.GetComponent<Jugador>();
+                if(jugador != null)
+                    jugador.Murio();
+
                 Destroy(other.gameObject);
+            }
 
             Destroy(this.gameObject);
         }
+    }
+
+    private void OnDisable()
+    {
+        Explotar = false;
+        CancelInvoke("Explota");
     }
 }

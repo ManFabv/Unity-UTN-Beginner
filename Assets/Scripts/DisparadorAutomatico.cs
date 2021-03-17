@@ -47,4 +47,9 @@ public class DisparadorAutomatico : MonoBehaviour
                 movimientoContinuo.ChangeVelocity(0, 0, VelocidadDisparo);
         }
     }
+
+    private void OnDisable()
+    {
+        CancelInvoke("FireWeapon");
+    }
 }

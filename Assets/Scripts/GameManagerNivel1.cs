@@ -37,6 +37,7 @@ public class GameManagerNivel1 : MonoBehaviour
     {
         DisableObjectsOfType<GeneradorOleadas>();
         DisableObjectsOfType<MovimientoContinuo>();
+        DisableObjectsOfType<MovimientoHorizontal>();
         DisableObjectsOfType<RotacionContinua>();
         DisableObjectsOfType<Disparador>();
         DisableObjectsOfType<DisparadorAutomatico>();

@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
 
     public void EnemigoMurio()
     {
+    	Debug.LogError("EnemigosMuertos: " + (EnemigosMuertos+1));
         EnemigosMuertos++;
     }
 }
