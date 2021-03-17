@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: -3821959288184101634}
   - component: {fileID: 4060931911705611395}
   - component: {fileID: -4128980396902768056}
-  - component: {fileID: 4131092601542098098}
   - component: {fileID: 7724768152646235426}
+  - component: {fileID: 4473267035788702083}
+  - component: {fileID: -4382200058609583197}
   m_Layer: 8
   m_Name: Enemigo3
   m_TagString: Enemy
@@ -129,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8056ac63788fd6b44a1bb634ed887242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 3923789614825491096, guid: 7e6510724c2d1464ea06e6500b98cb36, type: 3}
+  Prefab: {fileID: 2339640420181926629, guid: b0de3e7073668b748bc62c1a3309fded, type: 3}
   FireRate: 1.25
   VelocidadDisparo: 4
   tagToApplyDamage: Player
@@ -172,20 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e4020e5fe159e4ba27f583194499b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4131092601542098098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2199831974631971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26121d8a3c3240a5b445eac0c59faea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeToChangeDirection: 1
-  Velocity: 5
 --- !u!114 &7724768152646235426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +187,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   ScoreManager: {fileID: 0}
+--- !u!114 &4473267035788702083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3d949660770d74790a8e459de89ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadRotacionX: 0
+  velocidadRotacionY: 5
+  velocidadRotacionZ: 0
+--- !u!114 &-4382200058609583197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047531d5d4f48664399ebec23218d6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadX: -1
+  velocidadY: 0
+  velocidadZ: 3
 --- !u!1 &6970223962418453014
 GameObject:
   m_ObjectHideFlags: 0
