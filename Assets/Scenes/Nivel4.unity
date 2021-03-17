@@ -760,12 +760,12 @@ PrefabInstance:
     - target: {fileID: 3015033642279414321, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
         type: 3}
       propertyPath: TimeToLoseLevel
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3015033642279414321, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
         type: 3}
       propertyPath: MaxScoreParaGanar
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3015033642279414321, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
         type: 3}
@@ -841,6 +841,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4241374626152894361, guid: bd8cbbe307bb3714380c3c1fa7b1756e,
+        type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 6141458721760152698}
+    - target: {fileID: 7252403252090681719, guid: bd8cbbe307bb3714380c3c1fa7b1756e,
+        type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 6141458721760152698}
     - target: {fileID: 8131878352478461196, guid: bd8cbbe307bb3714380c3c1fa7b1756e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -901,6 +911,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_04
       objectReference: {fileID: 0}
+    - target: {fileID: 9191535009524769643, guid: bd8cbbe307bb3714380c3c1fa7b1756e,
+        type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 6141458721760152698}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8cbbe307bb3714380c3c1fa7b1756e, type: 3}
 --- !u!1001 &4592208731109972448
