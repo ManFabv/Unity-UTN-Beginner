@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GeneradorOleadas : MonoBehaviour
 {
@@ -56,5 +58,10 @@ public class GeneradorOleadas : MonoBehaviour
         float z = Random.Range(-maxValue, maxValue);
 
         return new Vector3(x, y, z);
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke("InstanciarObjeto");
     }
 }
