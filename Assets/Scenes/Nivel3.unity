@@ -624,6 +624,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3, type: 3}
+--- !u!114 &1456169541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3015033642279414321, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1456169540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba75efbf0e2a4aa7b3f1a6201dff7f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2012024572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -956,5 +968,10 @@ PrefabInstance:
       propertyPath: tagToApplyDamage
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6451830825854090718, guid: fd071644b8fb1364786ca85d716fb9c0,
+        type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1456169541}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd071644b8fb1364786ca85d716fb9c0, type: 3}
