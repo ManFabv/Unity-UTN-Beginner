@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6159546269021384393
 Transform:
@@ -46,8 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 0}
   SpawnRate: 5
+  VidaEnemigos: 30
   MaxRandomVelocity: 10
   MaxRandomRotation: 120
+  EnemyManager: {fileID: 0}
 --- !u!1 &1545911024324888424
 GameObject:
   m_ObjectHideFlags: 0

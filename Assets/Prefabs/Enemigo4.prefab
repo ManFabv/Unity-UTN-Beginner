@@ -12,15 +12,15 @@ GameObject:
   - component: {fileID: 2199831974631971385}
   - component: {fileID: 2199831974631971384}
   - component: {fileID: 2199831974631971387}
-  - component: {fileID: -3325154395533136226}
-  - component: {fileID: 2199831974631971388}
-  - component: {fileID: -6097928427731110952}
-  - component: {fileID: -3821959288184101634}
-  - component: {fileID: 4060931911705611395}
-  - component: {fileID: -4128980396902768056}
-  - component: {fileID: -5382559968048623727}
+  - component: {fileID: -8878088215903201450}
+  - component: {fileID: -4429272932281006040}
+  - component: {fileID: 3822128332695288611}
+  - component: {fileID: -828689362718212849}
+  - component: {fileID: -6958880089489204574}
+  - component: {fileID: -2370122608673112646}
+  - component: {fileID: -8593268211732446092}
   m_Layer: 8
-  m_Name: Enemigo2
+  m_Name: Enemigo4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ Transform:
   m_LocalPosition: {x: -10.68, y: 0, z: 6.97}
   m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children:
-  - {fileID: 4732584222093486844}
+  - {fileID: 7783056360300577341}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,7 +101,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-3325154395533136226
+--- !u!54 &-8878088215903201450
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,22 +117,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &2199831974631971388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2199831974631971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047531d5d4f48664399ebec23218d6f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadX: 6
-  velocidadY: 0
-  velocidadZ: 3
---- !u!114 &-6097928427731110952
+--- !u!114 &-4429272932281006040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,12 +129,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8056ac63788fd6b44a1bb634ed887242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 3923789614825491096, guid: 7e6510724c2d1464ea06e6500b98cb36, type: 3}
-  FireRate: 1.25
+  Prefab: {fileID: 2339640420181926629, guid: bb94ee2991f5ba44c8eb14882406dfde, type: 3}
+  FireRate: 1.15
   VelocidadDisparo: 4
   tagToApplyDamage: Player
-  DisparoSpawnPoint: {fileID: 4732584222093486844}
---- !u!114 &-3821959288184101634
+  DisparoSpawnPoint: {fileID: 7783056360300577341}
+--- !u!114 &3822128332695288611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 20
---- !u!114 &4060931911705611395
+--- !u!114 &-828689362718212849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,8 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4428c39d8a9348d698c9452b5d62e196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToExplode: 10
---- !u!114 &-4128980396902768056
+  TimeToExplode: 8
+--- !u!114 &-6958880089489204574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +172,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e4020e5fe159e4ba27f583194499b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5382559968048623727
+--- !u!114 &-2370122608673112646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26121d8a3c3240a5b445eac0c59faea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToChangeDirection: 1
+  Velocity: 5
+--- !u!114 &-8593268211732446092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   ScoreManager: {fileID: 0}
---- !u!1 &6970223962418453014
+--- !u!1 &8395450243725570677
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,7 +208,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4732584222093486844}
+  - component: {fileID: 7783056360300577341}
   m_Layer: 8
   m_Name: DisparoSpawnPoint
   m_TagString: Untagged
@@ -217,13 +216,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4732584222093486844
+--- !u!4 &7783056360300577341
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6970223962418453014}
+  m_GameObject: {fileID: 8395450243725570677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}

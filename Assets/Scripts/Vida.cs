@@ -18,6 +18,11 @@ public class Vida : MonoBehaviour
         }
     }
 
+    public void CambiarVida(int nuevaVida)
+    {
+        vida = nuevaVida;
+    }
+
     public void Dañar(int daño)
     {
         vida -= daño;

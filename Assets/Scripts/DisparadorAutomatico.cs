@@ -30,7 +30,7 @@ public class DisparadorAutomatico : MonoBehaviour
     {
         if (Prefab != null)
         {
-            GameObject weaponFire = Instantiate(Prefab, cachedTransform.position, cachedTransform.rotation);
+            GameObject weaponFire = Instantiate(Prefab, DisparoSpawnPoint.position, DisparoSpawnPoint.rotation);
             Dañador dañador = weaponFire.GetComponent<Dañador>();
 
             if(dañador != null)
