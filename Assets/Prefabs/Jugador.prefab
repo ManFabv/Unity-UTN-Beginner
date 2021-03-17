@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 3923789614825491096, guid: 7e6510724c2d1464ea06e6500b98cb36, type: 3}
   NombreAccion: DispararBomba
-  FireRate: 1
+  FireRate: 0.85
   VelocidadDisparo: 10
   tagToApplyDamage: Enemy
   DisparoSpawnPoint: {fileID: 1717023946568107713}

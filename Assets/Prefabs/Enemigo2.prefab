@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -6097928427731110952}
   - component: {fileID: -3821959288184101634}
   - component: {fileID: 4060931911705611395}
+  - component: {fileID: -4128980396902768056}
   m_Layer: 8
   m_Name: Enemigo2
   m_TagString: Enemy
@@ -173,6 +174,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToExplode: 10
+--- !u!114 &-4128980396902768056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e4020e5fe159e4ba27f583194499b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6970223962418453014
 GameObject:
   m_ObjectHideFlags: 0

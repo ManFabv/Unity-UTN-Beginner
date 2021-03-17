@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -4429272932281006040}
   - component: {fileID: 3822128332695288611}
   - component: {fileID: -828689362718212849}
+  - component: {fileID: -6958880089489204574}
   m_Layer: 8
   m_Name: Enemigo1
   m_TagString: Enemy
@@ -143,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 2339640420181926629, guid: bb94ee2991f5ba44c8eb14882406dfde, type: 3}
-  FireRate: 0.75
+  FireRate: 1.15
   VelocidadDisparo: 4
   tagToApplyDamage: Player
   DisparoSpawnPoint: {fileID: 7783056360300577341}
@@ -173,6 +174,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToExplode: 8
+--- !u!114 &-6958880089489204574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e4020e5fe159e4ba27f583194499b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8395450243725570677
 GameObject:
   m_ObjectHideFlags: 0

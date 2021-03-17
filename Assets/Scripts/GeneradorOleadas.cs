@@ -7,6 +7,7 @@ public class GeneradorOleadas : MonoBehaviour
     [SerializeField] private float SpawnRate = 5;
     [SerializeField] private float MaxRandomVelocity = 10;
     [SerializeField] private float MaxRandomRotation = 120;
+    [SerializeField] private EnemyManager EnemyManager;
 #pragma warning restore 0649
 
     private Transform cachedTransform;
@@ -16,6 +17,8 @@ public class GeneradorOleadas : MonoBehaviour
         cachedTransform = this.GetComponent<Transform>();
         InvokeRepeating("InstanciarObjeto", SpawnRate, SpawnRate);
 
+        if(EnemyManager == null)
+            Debug.LogError("EL " + typeof(EnemyManager) + " ES NULO EN " + nameof(EnemyManager));
         if(Prefab == null)
             Debug.LogError("NO SE ASIGNO UN OBJETO A LA PROPIEDAD " + nameof(Prefab));
     }
@@ -27,6 +30,7 @@ public class GeneradorOleadas : MonoBehaviour
             GameObject go = Instantiate(Prefab, cachedTransform.position, cachedTransform.rotation);
             MovimientoContinuo movimientoContinuo = go.GetComponent<MovimientoContinuo>();
             RotacionContinua rotacionContinua = go.GetComponent<RotacionContinua>();
+            Enemy enemyComponent = go.GetComponent<Enemy>();
 
             if (movimientoContinuo != null)
             {
@@ -39,6 +43,9 @@ public class GeneradorOleadas : MonoBehaviour
                 Vector3 vel = GenerarVelocidadAleatoria(MaxRandomRotation);
                 rotacionContinua.ChangeVelocity(vel);
             }
+
+            if(enemyComponent != null)
+                enemyComponent.SetEnemyManager(EnemyManager);
         }
     }
 
