@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748629f395ed14d47bc2c00d36cc31a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 2339640420181926629, guid: bb94ee2991f5ba44c8eb14882406dfde, type: 3}
+  Prefab: {fileID: 2339640420181926629, guid: 094873ef60764a342912b5c749729c7a, type: 3}
   NombreAccion: DispararBala
   FireRate: 0.5
   VelocidadDisparo: 20
