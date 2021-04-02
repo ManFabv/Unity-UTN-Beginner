@@ -4,7 +4,6 @@ public class MovimientoPersonaje : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private float velocidadMovimiento = 10;
-    [SerializeField] private float velocidadRotacion = 45;
     [SerializeField] private string ArribaNombreAccion = "Arriba";
     [SerializeField] private string AbajoNombreAccion = "Abajo";
     [SerializeField] private string DerechaNombreAccion = "Derecha";
@@ -42,12 +41,12 @@ public class MovimientoPersonaje : MonoBehaviour
 
         if (Input.GetButton(DerechaNombreAccion))
         {
-            cachedTransform.Rotate(0,velocidadRotacion * Time.deltaTime * bonusVelocidad,0, Space.Self);
+            cachedTransform.Translate(velocidadMovimiento * Time.deltaTime * bonusVelocidad, 0, 0);
         }
 
         if (Input.GetButton(IzquierdaNombreAccion))
         {
-            cachedTransform.Rotate(0,-velocidadRotacion * Time.deltaTime * bonusVelocidad,0, Space.Self);
+            cachedTransform.Translate(-velocidadMovimiento * Time.deltaTime * bonusVelocidad, 0, 0);
         }
     }
 
