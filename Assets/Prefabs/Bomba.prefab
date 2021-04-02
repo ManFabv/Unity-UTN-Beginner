@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 1628729910490560793}
   - component: {fileID: 7073614574854899682}
   - component: {fileID: 3014870722915062752}
+  - component: {fileID: -3956308739194007059}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Untagged
@@ -190,3 +191,18 @@ MonoBehaviour:
   NombreAccion: Explotar
   Explotar: 0
   TimeToExplode: 5
+--- !u!114 &-3956308739194007059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923789614825491096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047531d5d4f48664399ebec23218d6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 10
