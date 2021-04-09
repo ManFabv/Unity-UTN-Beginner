@@ -156,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bonus: 2
   DuracionDeBonus: 5
+  TakenEffect: {fileID: 7839730349898884530, guid: 88324ba409d960845b9dcb8aebdc0241,
+    type: 3}
 --- !u!1 &9020942930211789407
 GameObject:
   m_ObjectHideFlags: 0
