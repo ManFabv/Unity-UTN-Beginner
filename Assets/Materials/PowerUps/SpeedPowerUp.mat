@@ -10,8 +10,8 @@ Material:
   m_Name: SpeedPowerUp
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap:
@@ -37,13 +37,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 03b75b70d5b2ed247841f4f5ab1730b1, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0.24, y: 0.18}
+        m_Offset: {x: 0.79, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: e28858cba98a5bf41b3bc7cc34f8e3a7, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0.24, y: 0.18}
+        m_Offset: {x: 0.79, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,7 +61,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
-    - _GlossMapScale: 1
+    - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
@@ -74,5 +74,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.13333334, g: 0.4392157, b: 0.17254902, a: 1}
+    - _Color: {r: 0.9615791, g: 0.990566, b: 0.21026169, a: 1}
+    - _EmissionColor: {r: 0.62483895, g: 0.6698113, b: 0.091625154, a: 1}
