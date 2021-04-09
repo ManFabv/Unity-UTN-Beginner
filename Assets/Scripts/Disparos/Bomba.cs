@@ -6,6 +6,7 @@ public class Bomba : MonoBehaviour
     [SerializeField] private string NombreAccion = "Explotar";
     [SerializeField] private bool Explotar = false;
     [SerializeField] private float TimeToExplode = 5;
+    [SerializeField] private GameObject DeathEffect;
 #pragma warning restore 0649
 
     private string tagToApplyDamage = "Untagged";
@@ -37,7 +38,15 @@ public class Bomba : MonoBehaviour
     private void LateUpdate()
     {
         if(Explotar)
+        {
+            Explotar = false;
+            if (DeathEffect != null)
+            {
+                Instantiate(DeathEffect, this.transform.position, this.transform.rotation);
+            }
+
             Destroy(this.gameObject, 0.1f);
+        }
     }
 
     private void Explota()
