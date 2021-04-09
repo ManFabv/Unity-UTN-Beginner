@@ -11,6 +11,9 @@ public class VelocidadPowerUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         MovimientoPersonaje movimientoPersonaje = other.gameObject.GetComponent<MovimientoPersonaje>();
+        SpeedEffect speedEffect = other.gameObject.GetComponent<SpeedEffect>();
+
+        speedEffect?.StartSpeedEffect(DuracionDeBonus);
 
         if (movimientoPersonaje != null)
         {

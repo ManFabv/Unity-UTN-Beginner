@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float SecondsToTransitionAudioSnapshot = 1;
 #pragma warning enable 0649
 
+    private AudioSource[] cachedAudiosources;
+
     private void Awake()
     {
         Debug.LogError("LOADED");
@@ -18,6 +20,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            cachedAudiosources = this.GetComponents<AudioSource>();
             StartCoroutine(TransitionToAudioSnapshot());
         }
     }
@@ -25,6 +28,20 @@ public class AudioManager : MonoBehaviour
     private IEnumerator TransitionToAudioSnapshot()
     {
         yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+        PlayAllAudioSources();
+        yield return new WaitForEndOfFrame();
         GameplayAudioSnapShot.TransitionTo(SecondsToTransitionAudioSnapshot);
+    }
+
+    private void PlayAllAudioSources()
+    {
+        if (cachedAudiosources != null)
+        {
+            foreach (AudioSource audioSource in cachedAudiosources)
+            {
+                audioSource.Play();
+            }
+        }
     }
 }
