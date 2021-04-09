@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManagerNivel4 : MonoBehaviour
+public class GameLevelManager : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private int MaxScoreParaGanar = 10;
