@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
         PlayAllAudioSources();
         yield return new WaitForEndOfFrame();
         GameplayAudioSnapShot.TransitionTo(SecondsToTransitionAudioSnapshot);

@@ -21,8 +21,11 @@ public class SpeedEffect : MonoBehaviour
     {
         if (speedEffectGameObject != null)
         {
-            speedGOFX = Instantiate(speedEffectGameObject, cachedTransform.position, cachedTransform.rotation);
-            speedGOFX.transform.SetParent(cachedTransform);
+            if (speedGOFX == null)
+            {
+                speedGOFX = Instantiate(speedEffectGameObject, cachedTransform.position, cachedTransform.rotation);
+                speedGOFX.transform.SetParent(cachedTransform);
+            }
             Invoke("StopSpeedEffect", tiempoDeBonus);
         }
     }
