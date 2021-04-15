@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5006627870853055619}
   - component: {fileID: 5006627870853055618}
   - component: {fileID: 5006627870853055617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TopWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006627871265415198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LevelBoundaries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 5006627871281145549}
   - component: {fileID: 5006627871281145548}
   - component: {fileID: 5006627871281145587}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 5006627871294853514}
   - component: {fileID: 5006627871294853513}
   - component: {fileID: 5006627871294853512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BottomWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 5006627871567036392}
   - component: {fileID: 5006627871567036399}
   - component: {fileID: 5006627871567036398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
