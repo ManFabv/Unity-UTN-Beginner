@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 434579603414238859}
   - component: {fileID: 434579602970888560}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameLevelManager
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   TimeToLoseLevel: 1200
   TimeManager: {fileID: 0}
   ScoreManager: {fileID: 0}
+  AudioManager: {fileID: 0}
   NextWinLevelName: Nivel2
   NextLoseLevelName: Nivel1
   TimeBeforeLoadNextLevel: 5

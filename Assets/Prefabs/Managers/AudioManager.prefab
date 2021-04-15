@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7997902005328369623}
   - component: {fileID: 7997902005328369622}
   m_Layer: 0
-  m_Name: SoundManager
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameplayAudioSnapShot: {fileID: 4241408977113742087, guid: b0ea08891c6bddf4bb0facda439f4799,
     type: 2}
+  MuteAudioSnapShot: {fileID: 24500006, guid: b0ea08891c6bddf4bb0facda439f4799, type: 2}
+  WinMusic: {fileID: 0}
+  LoseMusic: {fileID: 0}
   SecondsToTransitionAudioSnapshot: 1
 --- !u!82 &7997902005328369623
 AudioSource:

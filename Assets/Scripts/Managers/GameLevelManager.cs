@@ -8,6 +8,7 @@ public class GameLevelManager : MonoBehaviour
     [SerializeField] private float TimeToLoseLevel = 10;
     [SerializeField] private TimeManager TimeManager;
     [SerializeField] private ScoreManager ScoreManager;
+    [SerializeField] private AudioManager AudioManager;
     [SerializeField] private string NextWinLevelName;
     [SerializeField] private string NextLoseLevelName;
     [SerializeField] private float TimeBeforeLoadNextLevel = 5;
@@ -35,6 +36,8 @@ public class GameLevelManager : MonoBehaviour
             Debug.LogError("EL " + typeof(ScoreManager) + " ES NULO EN " + nameof(ScoreManager));
         if (TimeManager == null)
             Debug.LogError("EL " + typeof(TimeManager) + " ES NULO EN " + nameof(TimeManager));
+        if (AudioManager == null)
+            Debug.LogError("EL " + typeof(AudioManager) + " ES NULO EN " + nameof(AudioManager));
         if(string.IsNullOrEmpty(NextWinLevelName))
             Debug.LogError("NO SE ESPECIFICO UN SIGUIENTE NIVEL EN " + nameof(NextWinLevelName));
         if(string.IsNullOrEmpty(NextLoseLevelName))
@@ -51,9 +54,15 @@ public class GameLevelManager : MonoBehaviour
             if (win || lose)
             {
                 if (win)
+                {
                     levelEndState = LevelEndState.WIN;
+                    AudioManager?.PlayWinMusic();
+                }
                 else if (lose)
+                {
                     levelEndState = LevelEndState.LOSE;
+                    AudioManager?.PlayLoseMusic();
+                }
                 
                 finishedLevel = true;
                 DisableAllAction();

@@ -6,6 +6,9 @@ public class AudioManager : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private AudioMixerSnapshot GameplayAudioSnapShot;
+    [SerializeField] private AudioMixerSnapshot MuteAudioSnapShot;
+    [SerializeField] private AudioClip WinMusic;
+    [SerializeField] private AudioClip LoseMusic;
     [SerializeField] private float SecondsToTransitionAudioSnapshot = 1;
 #pragma warning enable 0649
 
@@ -13,7 +16,12 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.LogError("LOADED");
+        if(WinMusic == null)
+            Debug.LogError("EL " + typeof(AudioClip) + " ES NULO EN " + nameof(WinMusic));
+        if(LoseMusic == null)
+            Debug.LogError("EL " + typeof(AudioClip) + " ES NULO EN " + nameof(LoseMusic));
+        if(MuteAudioSnapShot == null)
+            Debug.LogError("EL " + typeof(AudioMixerSnapshot) + " ES NULO EN " + nameof(MuteAudioSnapShot));
         if (GameplayAudioSnapShot == null)
         {
             Debug.LogError("EL " + typeof(AudioMixerSnapshot) + " ES NULO EN " + nameof(GameplayAudioSnapShot));
@@ -21,18 +29,18 @@ public class AudioManager : MonoBehaviour
         else
         {
             cachedAudiosources = this.GetComponents<AudioSource>();
-            StartCoroutine(TransitionToAudioSnapshot());
+            StartCoroutine(TransitionToAudioSnapshot(GameplayAudioSnapShot));
         }
     }
 
-    private IEnumerator TransitionToAudioSnapshot()
+    private IEnumerator TransitionToAudioSnapshot(AudioMixerSnapshot mixerSnapshot)
     {
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         PlayAllAudioSources();
         yield return new WaitForEndOfFrame();
-        GameplayAudioSnapShot.TransitionTo(SecondsToTransitionAudioSnapshot);
+        mixerSnapshot.TransitionTo(SecondsToTransitionAudioSnapshot);
     }
 
     private void PlayAllAudioSources()
@@ -44,5 +52,26 @@ public class AudioManager : MonoBehaviour
                 audioSource.Play();
             }
         }
+    }
+
+    public void PlayWinMusic()
+    {
+        if(LoseMusic != null)
+        {
+            Debug.LogError("WIN MUSIC");
+        }
+    }
+
+    public void PlayLoseMusic()
+    {
+        if(LoseMusic != null)
+        {
+            Debug.LogError("LOSE MUSIC");
+        }
+    }
+
+    public void TransitionToMuteSnapshot()
+    {
+        StartCoroutine(TransitionToAudioSnapshot(MuteAudioSnapShot));
     }
 }
