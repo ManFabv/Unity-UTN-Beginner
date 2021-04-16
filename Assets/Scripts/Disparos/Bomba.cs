@@ -60,11 +60,11 @@ public class Bomba : MonoBehaviour
         {
             if(other.CompareTag(tagToApplyDamage))
             {
+                Vida vida = other.GetComponent<Vida>();
+                vida?.SetVidaCero();
+                
                 Jugador jugador = other.gameObject.GetComponent<Jugador>();
-                if(jugador != null)
-                    jugador.Murio();
-
-                Destroy(other.gameObject);
+                jugador?.Murio();
             }
 
             Destroy(this.gameObject);

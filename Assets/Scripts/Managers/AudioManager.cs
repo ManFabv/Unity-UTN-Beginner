@@ -5,6 +5,9 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 #pragma warning disable 0649
+    [SerializeField] private AudioSource MusicAudioSource;
+    [SerializeField] private AudioSource EndLevelAudioSource;
+    [SerializeField] private AudioSource AmbientAudioSource;
     [SerializeField] private AudioMixerSnapshot GameplayAudioSnapShot;
     [SerializeField] private AudioMixerSnapshot MuteAudioSnapShot;
     [SerializeField] private AudioClip WinMusic;
@@ -12,10 +15,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float SecondsToTransitionAudioSnapshot = 1;
 #pragma warning enable 0649
 
-    private AudioSource[] cachedAudiosources;
-
     private void Awake()
     {
+        if(AmbientAudioSource == null)
+            Debug.LogError("EL " + typeof(AudioSource) + " ES NULO EN " + nameof(AmbientAudioSource));
+        if(EndLevelAudioSource == null)
+            Debug.LogError("EL " + typeof(AudioSource) + " ES NULO EN " + nameof(EndLevelAudioSource));
+        if(MusicAudioSource == null)
+            Debug.LogError("EL " + typeof(AudioSource) + " ES NULO EN " + nameof(MusicAudioSource));
         if(WinMusic == null)
             Debug.LogError("EL " + typeof(AudioClip) + " ES NULO EN " + nameof(WinMusic));
         if(LoseMusic == null)
@@ -28,7 +35,6 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            cachedAudiosources = this.GetComponents<AudioSource>();
             StartCoroutine(TransitionToAudioSnapshot(GameplayAudioSnapShot));
         }
     }
@@ -36,37 +42,29 @@ public class AudioManager : MonoBehaviour
     private IEnumerator TransitionToAudioSnapshot(AudioMixerSnapshot mixerSnapshot)
     {
         yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        PlayAllAudioSources();
+        AmbientAudioSource.Play();
+        MusicAudioSource.Play();
         yield return new WaitForEndOfFrame();
         mixerSnapshot.TransitionTo(SecondsToTransitionAudioSnapshot);
     }
 
-    private void PlayAllAudioSources()
-    {
-        if (cachedAudiosources != null)
-        {
-            foreach (AudioSource audioSource in cachedAudiosources)
-            {
-                audioSource.Play();
-            }
-        }
-    }
-
     public void PlayWinMusic()
     {
-        if(LoseMusic != null)
+        if(WinMusic != null && MusicAudioSource != null)
         {
-            Debug.LogError("WIN MUSIC");
+            MusicAudioSource.Stop();
+            EndLevelAudioSource.clip = WinMusic;
+            EndLevelAudioSource.PlayDelayed(1);
         }
     }
 
     public void PlayLoseMusic()
     {
-        if(LoseMusic != null)
+        if(LoseMusic != null && MusicAudioSource != null)
         {
-            Debug.LogError("LOSE MUSIC");
+            MusicAudioSource.Stop();
+            EndLevelAudioSource.clip = LoseMusic;
+            EndLevelAudioSource.PlayDelayed(2);
         }
     }
 

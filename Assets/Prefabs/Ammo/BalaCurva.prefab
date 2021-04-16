@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1156430849784668407}
   - component: {fileID: -1400649308166078635}
   - component: {fileID: 383890749164662008}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BalaCurva
   m_TagString: Untagged
   m_Icon: {fileID: 0}

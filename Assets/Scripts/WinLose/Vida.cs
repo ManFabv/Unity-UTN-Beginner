@@ -12,6 +12,7 @@ public class Vida : MonoBehaviour
 
     private bool toBeDestroy = false;
     private MeshRenderer MeshRenderer;
+    private bool dead = false;
 
     private void Awake()
     {
@@ -22,8 +23,9 @@ public class Vida : MonoBehaviour
 
     private void Update()
     {
-        if (vida <= 0 && toBeDestroy == false)
+        if (!dead && vida <= 0 && toBeDestroy == false)
         {
+            dead = true;
             toBeDestroy = true;
             SendMessage("Murio");
             StartCoroutine(DelayedDestroy());
@@ -33,7 +35,7 @@ public class Vida : MonoBehaviour
     private IEnumerator DelayedDestroy()
     {
         MeshRenderer.enabled = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.75f);
         Destroy(this.gameObject);
     }
 
@@ -47,5 +49,10 @@ public class Vida : MonoBehaviour
         vida -= daño;
 
         cachedDamageAudioSource.Play();
+    }
+
+    public void SetVidaCero()
+    {
+        vida = 0;
     }
 }

@@ -50,4 +50,4 @@ MonoBehaviour:
   AudioManager: {fileID: 0}
   NextWinLevelName: Nivel2
   NextLoseLevelName: Nivel1
-  TimeBeforeLoadNextLevel: 5
+  TimeBeforeLoadNextLevel: 8

@@ -11,7 +11,7 @@ public class GameLevelManager : MonoBehaviour
     [SerializeField] private AudioManager AudioManager;
     [SerializeField] private string NextWinLevelName;
     [SerializeField] private string NextLoseLevelName;
-    [SerializeField] private float TimeBeforeLoadNextLevel = 5;
+    [SerializeField] private float TimeBeforeLoadNextLevel = 9;
 #pragma warning restore 0649
 
     private enum LevelEndState
