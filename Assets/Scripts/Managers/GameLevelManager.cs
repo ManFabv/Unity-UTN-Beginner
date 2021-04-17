@@ -114,11 +114,13 @@ public class GameLevelManager : MonoBehaviour
         {
             levelToLoad = WinLevelName;
             LevelManager.NextLevel = NextWinLevelName;
+            LevelManager.CurrentLevel = NextLoseLevelName;
         }
         else if (levelEndState == LevelEndState.LOSE)
         {
             levelToLoad = LoseLevelName;
             LevelManager.NextLevel = NextLoseLevelName;
+            LevelManager.CurrentLevel = NextLoseLevelName;
         }
 
         if (!string.IsNullOrEmpty(levelToLoad))
