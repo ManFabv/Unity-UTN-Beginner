@@ -49,10 +49,17 @@ public class Vida : MonoBehaviour
         vida -= daño;
 
         cachedDamageAudioSource.Play();
+        
+        SendMessage("TakeDamage");
     }
 
     public void SetVidaCero()
     {
         vida = 0;
+    }
+
+    public int CurrentVida()
+    {
+        return vida;
     }
 }
