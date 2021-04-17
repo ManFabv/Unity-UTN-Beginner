@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 
-public class RepairPowerUp : MonoBehaviour
+public class ShootPowerUp : MonoBehaviour
 {
 #pragma warning disable 0649
-    [SerializeField] private int Bonus = 20;
-    [SerializeField] private int TiempoDeBonus = 4;
+    [SerializeField] private float DuracionDeBonus = 5;
     [SerializeField] private GameObject TakenEffect;
 #pragma warning restore 0649
 
     private void OnTriggerEnter(Collider other)
     {
-        RepairEffect repairEffect = other.gameObject.GetComponent<RepairEffect>();
+        ShootEffect shootEffect = other.gameObject.GetComponent<ShootEffect>();
 
-        repairEffect?.StartRepairEffect(TiempoDeBonus, Bonus);
+        shootEffect?.StartShootEffect(DuracionDeBonus);
         
         if (TakenEffect != null)
         {

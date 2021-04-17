@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b30c3d75d3326ee448bef126289c3e8a, type: 2}
+  - {fileID: 2100000, guid: 201d3206b2beb854c8d7ba594068fff7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,9 +91,9 @@ GameObject:
   - component: {fileID: 3783316417749987744}
   - component: {fileID: 3783316417749987745}
   - component: {fileID: -1983866492095880119}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RepairPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -443,7 +443,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 0.6666667, b: 0.23529412, a: 0.7058824}
-      maxColor: {r: 1, g: 0.8392157, b: 0.27058825, a: 0.30588236}
+      maxColor: {r: 0.6886792, g: 0.66648126, b: 0.5879761, a: 0.30588236}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

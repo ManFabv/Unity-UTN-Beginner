@@ -20,7 +20,7 @@ public class RepairEffect : MonoBehaviour
             Debug.LogError("EL " + typeof(GameObject) + " ES NULO EN " + nameof(repairEffectGameObject));
     }
 
-    public void StartRepairEffect(int amoutHealth)
+    public void StartRepairEffect(float tiempoDeBonus, int amoutHealth)
     {
         if (repairEffectGameObject != null)
         {
@@ -32,5 +32,14 @@ public class RepairEffect : MonoBehaviour
         }
         
         cachedVida.Curar(amoutHealth);
+        Invoke("StopSpeedEffect", tiempoDeBonus);
+    }
+    
+    private void StopSpeedEffect()
+    {
+        if (repairGOFX != null)
+        {
+            GameObject.Destroy(repairGOFX);
+        }
     }
 }

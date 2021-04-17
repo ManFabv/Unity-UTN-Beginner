@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 1269404926714208500}
   - component: {fileID: 7001778257418347308}
   - component: {fileID: 1640816971}
+  - component: {fileID: 3272929067680148075}
   m_Layer: 10
   m_Name: Jugador
   m_TagString: Player
@@ -5069,7 +5070,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 20
+  Priority: 80
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5174,6 +5175,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repairEffectGameObject: {fileID: 2929614212037843717, guid: a424b79bc78aa6f41a74ad7a9dc6c08b,
+    type: 3}
+--- !u!114 &3272929067680148075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592208731347348057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b86af42870d4feabf05ac66c783abbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootEffectGameObject: {fileID: 2929614212037843717, guid: befe75f1b81f00242bd25a4d6bed078b,
     type: 3}
 --- !u!1 &5074978031362629731
 GameObject:

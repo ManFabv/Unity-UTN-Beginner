@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5161264507162174513}
-  m_LocalRotation: {x: -0.6830127, y: -0.18301266, z: -0.18301266, w: 0.6830127}
+  m_LocalRotation: {x: -0.00000007450582, y: -0.70710677, z: -0.70710677, w: 0.00000007450582}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 8916500391573566514}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -30}
+  m_LocalEulerAnglesHint: {x: -90, y: -150, z: -30}
 --- !u!33 &6986418877013329136
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b30c3d75d3326ee448bef126289c3e8a, type: 2}
+  - {fileID: 2100000, guid: 867a23cb12677bd4a84c60f40dcb19bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,10 +90,10 @@ GameObject:
   - component: {fileID: 8916500391573566514}
   - component: {fileID: 3783316417749987744}
   - component: {fileID: 3783316417749987745}
-  - component: {fileID: 3783316417749987746}
-  m_Layer: 0
+  - component: {fileID: 4818826837559194896}
+  m_Layer: 13
   m_Name: ShootPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3783316417749987746
+--- !u!114 &4818826837559194896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,10 +151,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8916500391573071890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3669c871a1d3b284fb6d2ed77eb21739, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a6d7fbd6b9849468f5409d38383cdc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bonus: 2
   DuracionDeBonus: 5
   TakenEffect: {fileID: 7839730349898884530, guid: 88324ba409d960845b9dcb8aebdc0241,
     type: 3}
@@ -444,7 +443,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 0.6666667, b: 0.23529412, a: 0.7058824}
-      maxColor: {r: 1, g: 0.8392157, b: 0.27058825, a: 0.30588236}
+      maxColor: {r: 0.71991783, g: 0.27058828, b: 1, a: 0.14901961}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
