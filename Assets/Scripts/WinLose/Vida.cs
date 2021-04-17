@@ -13,6 +13,7 @@ public class Vida : MonoBehaviour
     private bool toBeDestroy = false;
     private MeshRenderer MeshRenderer;
     private bool dead = false;
+    private Collider[] cachedColliders;
     
     public int MaxLife { get; private set; }
     public int CurrentVida => vida;
@@ -20,9 +21,10 @@ public class Vida : MonoBehaviour
     private void Awake()
     {
         MaxLife = vida;
-        if(cachedDamageAudioSource == null)
-            cachedDamageAudioSource = this.GetComponent<AudioSource>();
+        cachedDamageAudioSource = this.GetComponent<AudioSource>();
         MeshRenderer = this.GetComponent<MeshRenderer>();
+
+        cachedColliders = this.GetComponentsInChildren<Collider>();
     }
 
     private void Update()
@@ -39,8 +41,20 @@ public class Vida : MonoBehaviour
     private IEnumerator DelayedDestroy()
     {
         MeshRenderer.enabled = false;
+        DisableAllColliders();
         yield return new WaitForSeconds(0.75f);
         Destroy(this.gameObject);
+    }
+
+    private void DisableAllColliders()
+    {
+        if (cachedColliders != null)
+        {
+            foreach (Collider col in cachedColliders)
+            {
+                col.enabled = false;
+            }
+        }
     }
 
     public void CambiarVida(int nuevaVida)

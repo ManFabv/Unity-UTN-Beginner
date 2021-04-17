@@ -17,10 +17,8 @@ GameObject:
   - component: {fileID: 2199831974631971388}
   - component: {fileID: -6097928427731110952}
   - component: {fileID: -3821959288184101634}
-  - component: {fileID: 4060931911705611395}
   - component: {fileID: -4128980396902768056}
   - component: {fileID: -5382559968048623727}
-  - component: {fileID: 7590348206514858016}
   - component: {fileID: -1486271243242884856}
   - component: {fileID: -6980143842621905255}
   - component: {fileID: -8999470475295681251}
@@ -164,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 3923789614825491096, guid: 7e6510724c2d1464ea06e6500b98cb36, type: 3}
   FireRate: 1.25
-  VelocidadDisparo: 4
+  VelocidadDisparo: 8
   tagToApplyDamage: Player
   DisparoSpawnPoint: {fileID: 4732584222093486844}
 --- !u!114 &-3821959288184101634
@@ -181,19 +179,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 20
   cachedDamageAudioSource: {fileID: 0}
---- !u!114 &4060931911705611395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2199831974631971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4428c39d8a9348d698c9452b5d62e196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeToExplode: 10
 --- !u!114 &-4128980396902768056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,21 +207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   ScoreManager: {fileID: 0}
---- !u!114 &7590348206514858016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2199831974631971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047531d5d4f48664399ebec23218d6f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadX: 0
-  velocidadY: 0
-  velocidadZ: 0
 --- !u!199 &-1486271243242884856
 ParticleSystemRenderer:
   serializedVersion: 6

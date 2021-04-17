@@ -14,13 +14,12 @@ GameObject:
   - component: {fileID: 2199831974631971387}
   - component: {fileID: 2177839301636150433}
   - component: {fileID: -8878088215903201450}
+  - component: {fileID: -2370122608673112646}
+  - component: {fileID: 509604777803066825}
   - component: {fileID: -4429272932281006040}
   - component: {fileID: 3822128332695288611}
-  - component: {fileID: -828689362718212849}
   - component: {fileID: -6958880089489204574}
-  - component: {fileID: -2370122608673112646}
   - component: {fileID: -8593268211732446092}
-  - component: {fileID: 509604777803066825}
   - component: {fileID: -4936772059491025195}
   - component: {fileID: -3679545970489282625}
   - component: {fileID: -7180875053801496241}
@@ -135,6 +134,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-2370122608673112646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26121d8a3c3240a5b445eac0c59faea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinTimeToChangeDirection: 0.5
+  MaxTimeToChangeDirection: 1.5
+  Velocity: 5
+--- !u!114 &509604777803066825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047531d5d4f48664399ebec23218d6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 5
 --- !u!114 &-4429272932281006040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 2339640420181926629, guid: bb94ee2991f5ba44c8eb14882406dfde, type: 3}
   FireRate: 1.15
-  VelocidadDisparo: 4
+  VelocidadDisparo: 8
   tagToApplyDamage: Player
   DisparoSpawnPoint: {fileID: 7783056360300577341}
 --- !u!114 &3822128332695288611
@@ -166,19 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 20
   cachedDamageAudioSource: {fileID: 0}
---- !u!114 &-828689362718212849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2199831974631971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4428c39d8a9348d698c9452b5d62e196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeToExplode: 8
 --- !u!114 &-6958880089489204574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,20 +209,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathEffect: {fileID: 359778657411409773, guid: 5bc162829b87e5a43a547d54395ff3ec,
     type: 3}
---- !u!114 &-2370122608673112646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2199831974631971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26121d8a3c3240a5b445eac0c59faea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeToChangeDirection: 1
-  Velocity: 5
 --- !u!114 &-8593268211732446092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,21 +223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   ScoreManager: {fileID: 0}
---- !u!114 &509604777803066825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2199831974631971386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047531d5d4f48664399ebec23218d6f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadX: 0
-  velocidadY: 0
-  velocidadZ: 5
 --- !u!199 &-4936772059491025195
 ParticleSystemRenderer:
   serializedVersion: 6

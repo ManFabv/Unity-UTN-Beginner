@@ -107,4 +107,10 @@ public class GameLevelManager : MonoBehaviour
         if (!string.IsNullOrEmpty(levelToLoad))
             SceneManager.LoadScene(levelToLoad);
     }
+
+    public void LevelQuit()
+    {
+        finishedLevel = true;
+        DisableAllAction();
+    }
 }

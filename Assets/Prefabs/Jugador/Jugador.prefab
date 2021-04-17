@@ -150,7 +150,7 @@ MonoBehaviour:
   Prefab: {fileID: 2339640420181926629, guid: 094873ef60764a342912b5c749729c7a, type: 3}
   NombreAccion: DispararBala
   FireRate: 0.5
-  VelocidadDisparo: 60
+  VelocidadDisparo: 70
   tagToApplyDamage: Enemy
   DisparoSpawnPoint: {fileID: 1717023946568107713}
 --- !u!114 &7497781553943334849
