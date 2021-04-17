@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadX: 0
   velocidadY: 0
-  velocidadZ: -3
+  velocidadZ: 3
 --- !u!135 &3783316417749987745
 SphereCollider:
   m_ObjectHideFlags: 0

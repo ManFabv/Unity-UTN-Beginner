@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: -4936772059491025195}
   - component: {fileID: -3679545970489282625}
   - component: {fileID: -7180875053801496241}
+  - component: {fileID: -6983425737292251201}
   m_Layer: 8
   m_Name: Enemigo4
   m_TagString: Enemy
@@ -5042,6 +5043,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6983425737292251201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199831974631971386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb70217ff04f1b2448f5d822087be3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LootPrefabs:
+  - {fileID: 8916500391573071890, guid: 069aff8ca677fbe478b34eb52a3fa110, type: 3}
+  - {fileID: 8916500391573071890, guid: 77e01dc66b07d294580e3080c9651fda, type: 3}
+  - {fileID: 8916500391573071890, guid: 693600f4377d7f948a0faddf4dbe5287, type: 3}
+  LootProbability: 20
 --- !u!1 &8395450243725570677
 GameObject:
   m_ObjectHideFlags: 0
