@@ -13,7 +13,7 @@ public class GameUI : MonoBehaviour
     // [SerializeField] private float SecondsToTransitionAudioSnapshot = 1;
     [SerializeField] private string Menu_Level_Name = "Menu";
     [SerializeField] private UIAnimator LoaderScreen;
-#pragma warning enable 0649
+#pragma warning restore 0649
 
     private string sceneToLoad = string.Empty;
     

@@ -14,7 +14,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private string Level_1_Name = "Nivel1";
     [SerializeField] private string Level_Tutorial_Name = "Tutorial";
     [SerializeField] private UIAnimator LoaderScreen;
-#pragma warning enable 0649
+#pragma warning restore 0649
 
     private string sceneToLoad = string.Empty;
     

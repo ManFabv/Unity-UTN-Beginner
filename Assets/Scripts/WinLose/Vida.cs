@@ -13,9 +13,13 @@ public class Vida : MonoBehaviour
     private bool toBeDestroy = false;
     private MeshRenderer MeshRenderer;
     private bool dead = false;
+    
+    public int MaxLife { get; private set; }
+    public int CurrentVida => vida;
 
     private void Awake()
     {
+        MaxLife = vida;
         if(cachedDamageAudioSource == null)
             cachedDamageAudioSource = this.GetComponent<AudioSource>();
         MeshRenderer = this.GetComponent<MeshRenderer>();
@@ -50,16 +54,11 @@ public class Vida : MonoBehaviour
 
         cachedDamageAudioSource.Play();
         
-        SendMessage("TakeDamage");
+        SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
     }
 
     public void SetVidaCero()
     {
         vida = 0;
-    }
-
-    public int CurrentVida()
-    {
-        return vida;
     }
 }

@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private GameObject DeathEffect;
-#pragma warning enable 0649
+#pragma warning restore 0649
 
     private EnemyManager EnemyManager;
 

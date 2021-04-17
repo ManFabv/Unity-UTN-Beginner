@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 public class UIAnimator : MonoBehaviour
@@ -13,7 +12,7 @@ public class UIAnimator : MonoBehaviour
 
 #pragma warning disable 0649
     [SerializeField] private UIAnimatorState InitialState = UIAnimatorState.None;
-#pragma warning enable 0649
+#pragma warning restore 0649
 
     private Animator cachedAnimator;
     

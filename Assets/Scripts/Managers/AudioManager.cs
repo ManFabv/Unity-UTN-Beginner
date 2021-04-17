@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip WinMusic;
     [SerializeField] private AudioClip LoseMusic;
     [SerializeField] private float SecondsToTransitionAudioSnapshot = 1;
-#pragma warning enable 0649
+#pragma warning restore 0649
 
     private void Awake()
     {
