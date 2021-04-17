@@ -839,6 +839,26 @@ PrefabInstance:
       propertyPath: WinLevelName
       value: GanarJuego
       objectReference: {fileID: 0}
+    - target: {fileID: 434579602970888560, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
+        type: 3}
+      propertyPath: NextWinLevelName
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 434579602970888560, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
+        type: 3}
+      propertyPath: NextLoseLevelName
+      value: Nivel4
+      objectReference: {fileID: 0}
+    - target: {fileID: 434579602970888560, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
+        type: 3}
+      propertyPath: MaxScoreParaGanar
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 434579602970888560, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
+        type: 3}
+      propertyPath: TimeToLoseLevel
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 434579603414238858, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
         type: 3}
       propertyPath: m_Name
@@ -1185,6 +1205,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 842281325482856330, guid: fd071644b8fb1364786ca85d716fb9c0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 842281325482856330, guid: fd071644b8fb1364786ca85d716fb9c0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.81564426
+      objectReference: {fileID: 0}
+    - target: {fileID: 842281325482856330, guid: fd071644b8fb1364786ca85d716fb9c0,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.32858673
+      objectReference: {fileID: 0}
     - target: {fileID: 4592208731347348057, guid: fd071644b8fb1364786ca85d716fb9c0,
         type: 3}
       propertyPath: m_Name
@@ -1393,6 +1428,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6167958285933134035, guid: 8b0c50c5d45915f49a38b56949f1f7af,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167958285933134035, guid: 8b0c50c5d45915f49a38b56949f1f7af,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.81564426
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167958285933134035, guid: 8b0c50c5d45915f49a38b56949f1f7af,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.32858673
+      objectReference: {fileID: 0}
     - target: {fileID: 6167958285933134044, guid: 8b0c50c5d45915f49a38b56949f1f7af,
         type: 3}
       propertyPath: m_Name
@@ -1550,6 +1600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBackground
       objectReference: {fileID: 0}
+    - target: {fileID: 8570410230013699812, guid: 9a5f0762e6b3b7d4487eaa947e99aaed,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 595759e08ad83f1439ad0d0fa9a88602, type: 2}
     - target: {fileID: 8570410230013699814, guid: 9a5f0762e6b3b7d4487eaa947e99aaed,
         type: 3}
       propertyPath: m_LocalPosition.x
