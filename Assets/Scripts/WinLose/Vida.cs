@@ -21,7 +21,8 @@ public class Vida : MonoBehaviour
     private void Awake()
     {
         MaxLife = vida;
-        cachedDamageAudioSource = this.GetComponent<AudioSource>();
+        if(cachedDamageAudioSource == null)
+            cachedDamageAudioSource = this.GetComponent<AudioSource>();
         MeshRenderer = this.GetComponent<MeshRenderer>();
 
         cachedColliders = this.GetComponentsInChildren<Collider>();
@@ -64,6 +65,8 @@ public class Vida : MonoBehaviour
 
     public void Dañar(int daño)
     {
+        if(this.CompareTag("Player"))
+            Debug.LogError("cachedDamageAudioSource == null : " + (cachedDamageAudioSource == null));
         vida -= daño;
 
         cachedDamageAudioSource?.Play();

@@ -19,7 +19,7 @@ public class Dañador : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Vida vida = other.gameObject.GetComponent<Vida>();
-
+        
         if (vida != null && other.gameObject.CompareTag(tagToApplyDamage))
         {
             vida.Dañar(Daño);
