@@ -66,9 +66,14 @@ public class Vida : MonoBehaviour
     {
         vida -= daño;
 
-        cachedDamageAudioSource.Play();
+        cachedDamageAudioSource?.Play();
         
         SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
+    }
+
+    public void Curar(int amount)
+    {
+        vida = Mathf.Min(vida + amount, MaxLife);
     }
 
     public void SetVidaCero()

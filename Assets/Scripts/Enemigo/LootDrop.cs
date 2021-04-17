@@ -23,11 +23,11 @@ public class LootDrop : MonoBehaviour
         if (LootPrefabs != null && LootPrefabs.Length > 0)
         {
             int randomProbability = Random.Range(0, 100);
-            bool canDropLoot = LootProbability <= randomProbability;
+            bool canDropLoot = true; //LootProbability <= randomProbability;
 
             if (canDropLoot)
             {
-                int lootPrefabIndex = Random.Range(0, LootPrefabs.Length);
+                int lootPrefabIndex = 0;//Random.Range(0, LootPrefabs.Length);
                 GameObject loot = LootPrefabs[lootPrefabIndex];
                 Instantiate(loot, this.transform.position, this.transform.rotation);
             }
