@@ -6,6 +6,7 @@ public class GeneradorOleadas : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private GameObject Prefab;
+    [SerializeField] private float TimeForFirstSpawnRate = 2;
     [SerializeField] private float SpawnRate = 5;
     [SerializeField] private int VidaEnemigos = 30;
     [SerializeField] private float MaxRandomVelocity = 10;
@@ -19,7 +20,8 @@ public class GeneradorOleadas : MonoBehaviour
     private void Awake()
     {
         cachedTransform = this.GetComponent<Transform>();
-        InvokeRepeating("InstanciarObjeto", SpawnRate, SpawnRate);
+
+        FirstSpawn();
 
         if(EnemyManager == null)
             Debug.LogError("EL " + typeof(EnemyManager) + " ES NULO EN " + nameof(EnemyManager));
@@ -27,6 +29,12 @@ public class GeneradorOleadas : MonoBehaviour
             Debug.LogError("EL " + typeof(ScoreManager) + " ES NULO EN " + nameof(ScoreManager));
         if(Prefab == null)
             Debug.LogError("NO SE ASIGNO UN OBJETO A LA PROPIEDAD " + nameof(Prefab));
+    }
+
+    private void FirstSpawn()
+    {
+        Invoke("InstanciarObjeto", TimeForFirstSpawnRate);
+        InvokeRepeating("InstanciarObjeto", SpawnRate, SpawnRate);
     }
 
     private void InstanciarObjeto()
@@ -73,9 +81,9 @@ public class GeneradorOleadas : MonoBehaviour
 
     private Vector3 GenerarVelocidadAleatoria(float maxValue)
     {
-        float x = Random.Range(-maxValue, maxValue);
-        float y = Random.Range(-maxValue, maxValue);
-        float z = Random.Range(-maxValue, maxValue);
+        float x = 0; //Random.Range(-maxValue, maxValue);
+        float y = 0; //Random.Range(-maxValue, maxValue);
+        float z = maxValue;//Random.Range(-maxValue, maxValue);
 
         return new Vector3(x, y, z);
     }

@@ -4,7 +4,7 @@ public class LootDrop : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private GameObject[] LootPrefabs;
-    [SerializeField] private int LootProbability = 20;
+    [SerializeField] private int LootProbability = 10;
 #pragma warning restore 0649
 
     private void Awake()
@@ -23,7 +23,7 @@ public class LootDrop : MonoBehaviour
         if (LootPrefabs != null && LootPrefabs.Length > 0)
         {
             int randomProbability = Random.Range(0, 100);
-            bool canDropLoot = LootProbability <= randomProbability;
+            bool canDropLoot = randomProbability < LootProbability;
 
             if (canDropLoot)
             {

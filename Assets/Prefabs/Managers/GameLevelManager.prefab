@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba75efbf0e2a4aa7b3f1a6201dff7f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxScoreParaGanar: 30
+  MaxScoreParaGanar: 100
   TimeToLoseLevel: 1200
   TimeManager: {fileID: 0}
   ScoreManager: {fileID: 0}
@@ -52,5 +52,5 @@ MonoBehaviour:
   NextLoseLevelName: Nivel1
   WinLevelName: Ganar
   LoseLevelName: Perder
-  TimeBeforeLoadNextLevel: 8
+  TimeBeforeLoadNextLevel: 7
   GameUI: {fileID: 0}

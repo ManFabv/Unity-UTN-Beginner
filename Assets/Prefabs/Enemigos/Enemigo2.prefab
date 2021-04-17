@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 3923789614825491096, guid: 7e6510724c2d1464ea06e6500b98cb36, type: 3}
-  FireRate: 1.25
+  FireRate: 3
   VelocidadDisparo: 8
   tagToApplyDamage: Player
   DisparoSpawnPoint: {fileID: 4732584222093486844}
@@ -5043,7 +5043,7 @@ MonoBehaviour:
   - {fileID: 8916500391573071890, guid: 069aff8ca677fbe478b34eb52a3fa110, type: 3}
   - {fileID: 8916500391573071890, guid: 77e01dc66b07d294580e3080c9651fda, type: 3}
   - {fileID: 8916500391573071890, guid: 693600f4377d7f948a0faddf4dbe5287, type: 3}
-  LootProbability: 20
+  LootProbability: 10
 --- !u!1 &6970223962418453014
 GameObject:
   m_ObjectHideFlags: 0
