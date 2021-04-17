@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
@@ -9,12 +10,18 @@ public class GameUI : MonoBehaviour
     [SerializeField] private string Menu_Level_Name = "Menu";
     [SerializeField] private UIAnimator LoaderScreen;
     [SerializeField] private GameLevelManager GameManager;
+    [SerializeField] private TMP_Text WinText;
+    [SerializeField] private TMP_Text LoseText;
 #pragma warning restore 0649
 
     // private string sceneToLoad = string.Empty;
     
     private void Awake()
     {
+        if(WinText == null)
+            Debug.LogError("EL " + typeof(TMP_Text) + " ES NULO EN " + nameof(WinText));
+        if(LoseText == null)
+            Debug.LogError("EL " + typeof(TMP_Text) + " ES NULO EN " + nameof(LoseText));
         if(GameManager == null)
             Debug.LogError("EL " + typeof(GameLevelManager) + " ES NULO EN " + nameof(GameManager));
         if(string.IsNullOrEmpty(Menu_Level_Name))
@@ -31,6 +38,18 @@ public class GameUI : MonoBehaviour
         FadeOutLoaderScreen();
         GameManager?.LevelQuit();
         Invoke("LoadScene", SecondsToTransition);
+    }
+
+    public void ShowWinLevel()
+    {
+        if(WinText != null)
+            WinText.enabled = true;
+    }
+    
+    public void ShowLoseLevel()
+    {
+        if(LoseText != null)
+            LoseText.enabled = false;
     }
 
     private void FadeOutLoaderScreen()

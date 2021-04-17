@@ -12,6 +12,7 @@ public class GameLevelManager : MonoBehaviour
     [SerializeField] private string NextWinLevelName;
     [SerializeField] private string NextLoseLevelName;
     [SerializeField] private float TimeBeforeLoadNextLevel = 9;
+    [SerializeField] private GameUI GameUI;
 #pragma warning restore 0649
 
     private enum LevelEndState
@@ -32,6 +33,8 @@ public class GameLevelManager : MonoBehaviour
 
     private void Awake()
     {
+        if (GameUI == null)
+            Debug.LogError("EL " + typeof(GameUI) + " ES NULO EN " + nameof(GameUI));
         if (ScoreManager == null)
             Debug.LogError("EL " + typeof(ScoreManager) + " ES NULO EN " + nameof(ScoreManager));
         if (TimeManager == null)
@@ -57,11 +60,13 @@ public class GameLevelManager : MonoBehaviour
                 {
                     levelEndState = LevelEndState.WIN;
                     AudioManager?.PlayWinMusic();
+                    GameUI?.ShowWinLevel();
                 }
                 else if (lose)
                 {
                     levelEndState = LevelEndState.LOSE;
                     AudioManager?.PlayLoseMusic();
+                    GameUI?.ShowLoseLevel();
                 }
                 
                 finishedLevel = true;

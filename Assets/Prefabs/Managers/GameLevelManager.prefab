@@ -51,3 +51,4 @@ MonoBehaviour:
   NextWinLevelName: Nivel2
   NextLoseLevelName: Nivel1
   TimeBeforeLoadNextLevel: 8
+  GameUI: {fileID: 0}
