@@ -50,5 +50,7 @@ MonoBehaviour:
   AudioManager: {fileID: 0}
   NextWinLevelName: Nivel2
   NextLoseLevelName: Nivel1
+  WinLevelName: Ganar
+  LoseLevelName: Perder
   TimeBeforeLoadNextLevel: 8
   GameUI: {fileID: 0}

@@ -11,6 +11,8 @@ public class GameLevelManager : MonoBehaviour
     [SerializeField] private AudioManager AudioManager;
     [SerializeField] private string NextWinLevelName;
     [SerializeField] private string NextLoseLevelName;
+    [SerializeField] private string WinLevelName = "Ganar";
+    [SerializeField] private string LoseLevelName = "Perder";
     [SerializeField] private float TimeBeforeLoadNextLevel = 9;
     [SerializeField] private GameUI GameUI;
 #pragma warning restore 0649
@@ -45,6 +47,10 @@ public class GameLevelManager : MonoBehaviour
             Debug.LogError("NO SE ESPECIFICO UN SIGUIENTE NIVEL EN " + nameof(NextWinLevelName));
         if(string.IsNullOrEmpty(NextLoseLevelName))
             Debug.LogError("NO SE ESPECIFICO UN SIGUIENTE NIVEL EN " + nameof(NextLoseLevelName));
+        if(string.IsNullOrEmpty(WinLevelName))
+            Debug.LogError("NO SE ESPECIFICO UN SIGUIENTE NIVEL EN " + nameof(WinLevelName));
+        if(string.IsNullOrEmpty(LoseLevelName))
+            Debug.LogError("NO SE ESPECIFICO UN SIGUIENTE NIVEL EN " + nameof(LoseLevelName));
     }
 
     private void Update()
@@ -105,9 +111,15 @@ public class GameLevelManager : MonoBehaviour
     {
         string levelToLoad = string.Empty;
         if (levelEndState == LevelEndState.WIN)
-            levelToLoad = NextWinLevelName;
+        {
+            levelToLoad = WinLevelName;
+            LevelManager.NextLevel = NextWinLevelName;
+        }
         else if (levelEndState == LevelEndState.LOSE)
-            levelToLoad = NextLoseLevelName;
+        {
+            levelToLoad = LoseLevelName;
+            LevelManager.NextLevel = NextLoseLevelName;
+        }
 
         if (!string.IsNullOrEmpty(levelToLoad))
             SceneManager.LoadScene(levelToLoad);
