@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 public class UIAnimator : MonoBehaviour
@@ -10,7 +11,11 @@ public class UIAnimator : MonoBehaviour
         FadeOut
     }
 
+#pragma warning disable 0649
     [SerializeField] private UIAnimatorState InitialState = UIAnimatorState.None;
+#pragma warning enable 0649
+
+    private Animator cachedAnimator;
     
     private void Awake()
     {
@@ -21,8 +26,18 @@ public class UIAnimator : MonoBehaviour
         }
         if(!string.IsNullOrEmpty(tweenToExecute))
         {
-            Animator animator = this.GetComponent<Animator>();
-            animator.SetTrigger(tweenToExecute);
+            cachedAnimator = this.GetComponent<Animator>();
+            cachedAnimator.SetTrigger(tweenToExecute);
         }
+    }
+
+    public void FadeIn()
+    {
+        cachedAnimator.SetTrigger(UIAnimatorState.FadeIn.ToString());
+    }
+    
+    public void FadeOut()
+    {
+        cachedAnimator.SetTrigger(UIAnimatorState.FadeOut.ToString());
     }
 }
