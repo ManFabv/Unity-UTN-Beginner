@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -7948872684664040781}
   - component: {fileID: 3529085567070035768}
   - component: {fileID: -5584688110142542999}
+  - component: {fileID: -4561602462750045766}
   m_Layer: 11
   m_Name: BalaEnemigos
   m_TagString: Untagged
@@ -251,3 +252,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &-4561602462750045766
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2339640420181926629}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0

@@ -50,7 +50,7 @@ public class GeneradorOleadas : MonoBehaviour
 
             Enemy enemyComponent = go.GetComponent<Enemy>();
 
-            if (movimientoContinuo != null)
+            if (movimientoContinuo != null && movimientoHorizontal == null)
             {
                 Vector3 vel = GenerarVelocidadAleatoria(MaxRandomVelocity);
                 movimientoContinuo.ChangeVelocity(vel);
@@ -81,9 +81,9 @@ public class GeneradorOleadas : MonoBehaviour
 
     private Vector3 GenerarVelocidadAleatoria(float maxValue)
     {
-        float x = 0; //Random.Range(-maxValue, maxValue);
-        float y = 0; //Random.Range(-maxValue, maxValue);
-        float z = maxValue;//Random.Range(-maxValue, maxValue);
+        float x = Random.Range(-maxValue, maxValue);
+        float y = Random.Range(-maxValue, maxValue);
+        float z = Random.Range(maxValue/2.0f, maxValue);
 
         return new Vector3(x, y, z);
     }

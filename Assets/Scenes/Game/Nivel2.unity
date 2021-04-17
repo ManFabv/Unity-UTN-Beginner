@@ -279,17 +279,17 @@ PrefabInstance:
     - target: {fileID: 6881124228690678627, guid: 2df169b8787d8da4d8f71a403b9905ab,
         type: 3}
       propertyPath: SpawnRate
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6881124228690678627, guid: 2df169b8787d8da4d8f71a403b9905ab,
         type: 3}
       propertyPath: VidaEnemigos
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6881124228690678627, guid: 2df169b8787d8da4d8f71a403b9905ab,
         type: 3}
       propertyPath: MaxRandomVelocity
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df169b8787d8da4d8f71a403b9905ab, type: 3}
@@ -450,7 +450,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Prefab
       value: 
-      objectReference: {fileID: 2199831974631971386, guid: d420b4494df84e6408a419961371b79a,
+      objectReference: {fileID: 2199831974631971386, guid: 9c398d82e5687c042b31c971244f62f4,
         type: 3}
     - target: {fileID: 6881124228690678627, guid: 2df169b8787d8da4d8f71a403b9905ab,
         type: 3}
@@ -465,17 +465,17 @@ PrefabInstance:
     - target: {fileID: 6881124228690678627, guid: 2df169b8787d8da4d8f71a403b9905ab,
         type: 3}
       propertyPath: SpawnRate
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6881124228690678627, guid: 2df169b8787d8da4d8f71a403b9905ab,
         type: 3}
       propertyPath: VidaEnemigos
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6881124228690678627, guid: 2df169b8787d8da4d8f71a403b9905ab,
         type: 3}
       propertyPath: MaxRandomVelocity
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df169b8787d8da4d8f71a403b9905ab, type: 3}

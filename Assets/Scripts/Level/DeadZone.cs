@@ -6,4 +6,9 @@ public class DeadZone : MonoBehaviour
     {
         GameObject.Destroy(other.gameObject);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        GameObject.Destroy(other.gameObject);
+    }
 }
