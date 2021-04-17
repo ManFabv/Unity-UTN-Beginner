@@ -852,7 +852,7 @@ PrefabInstance:
     - target: {fileID: 434579602970888560, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
         type: 3}
       propertyPath: MaxScoreParaGanar
-      value: 220
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 434579602970888560, guid: 3225d6a4b00a6c54ab1fa63b4e62d8b3,
         type: 3}
