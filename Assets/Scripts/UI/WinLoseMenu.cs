@@ -69,6 +69,18 @@ public class WinLoseMenu : MonoBehaviour
         Invoke("LoadScene", SecondsToTransition);
     }
     
+    public void ButtonExitClicked()
+    {
+        TransitionToMuteSnapshot();
+        FadeOutLoaderScreen();
+        Invoke("AppQuit", SecondsToTransition);
+    }
+    
+    private void AppQuit()
+    {
+        Application.Quit();
+    }
+    
     private void TransitionToMuteSnapshot()
     {
         StartCoroutine(TransitionToAudioSnapshot(MuteAudioSnapShot));
@@ -77,11 +89,6 @@ public class WinLoseMenu : MonoBehaviour
     private void FadeOutLoaderScreen()
     {
         LoaderScreen?.FadeOut();
-    }
-
-    private void AppQuit()
-    {
-        Application.Quit();
     }
 
     private void LoadScene()
