@@ -2,7 +2,6 @@
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-[RequireComponent(typeof(MeshRenderer))]
 public class Vida : MonoBehaviour
 {
 #pragma warning disable 0649
@@ -11,7 +10,8 @@ public class Vida : MonoBehaviour
 #pragma warning restore 0649
 
     private bool toBeDestroy = false;
-    private MeshRenderer MeshRenderer;
+    private MeshRenderer[] MeshRenderers;
+    private ParticleSystem[] ParticleSystems;
     private bool dead = false;
     private Collider[] cachedColliders;
     
@@ -23,7 +23,8 @@ public class Vida : MonoBehaviour
         MaxLife = vida;
         if(cachedDamageAudioSource == null)
             cachedDamageAudioSource = this.GetComponent<AudioSource>();
-        MeshRenderer = this.GetComponent<MeshRenderer>();
+        MeshRenderers = this.GetComponentsInChildren<MeshRenderer>();
+        ParticleSystems = this.GetComponentsInChildren<ParticleSystem>();
 
         cachedColliders = this.GetComponentsInChildren<Collider>();
     }
@@ -41,7 +42,8 @@ public class Vida : MonoBehaviour
 
     private IEnumerator DelayedDestroy()
     {
-        MeshRenderer.enabled = false;
+        DisableAllMeshRenderers();
+        StopAllParticleSystems();
         DisableAllColliders();
         yield return new WaitForSeconds(0.75f);
         Destroy(this.gameObject);
@@ -54,6 +56,28 @@ public class Vida : MonoBehaviour
             foreach (Collider col in cachedColliders)
             {
                 col.enabled = false;
+            }
+        }
+    }
+
+    private void DisableAllMeshRenderers()
+    {
+        if (MeshRenderers != null)
+        {
+            foreach (MeshRenderer meshRenderer in MeshRenderers)
+            {
+                meshRenderer.enabled = false;
+            }
+        }
+    }
+    
+    private void StopAllParticleSystems()
+    {
+        if (ParticleSystems != null)
+        {
+            foreach (ParticleSystem particleSystem in ParticleSystems)
+            {
+                particleSystem.Stop();
             }
         }
     }
